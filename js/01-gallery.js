@@ -2,12 +2,11 @@ import { galleryItems } from './gallery-items.js';
 console.log(galleryItems); 
 
  const galleryContainer = document.querySelector('.gallery')
- console.log(galleryContainer);
+ 
  const murkUp = createGalleryItem (galleryItems);
- console.log(murkUp);
+ 
  galleryContainer.insertAdjacentHTML('beforeend', murkUp)
 const galleryEl = document.querySelector('.gallery');
-console.log(galleryEl);
 galleryEl.addEventListener('click', onClick)
 
 
@@ -33,7 +32,6 @@ console.log(createGalleryItem);
 function onClick(evt) {
     evt.preventDefault();
 const urlImg = evt.target.getAttribute("data-source")
-
     const instance = basicLightbox.create(`
    
     <img
@@ -46,6 +44,7 @@ const urlImg = evt.target.getAttribute("data-source")
 `);
 instance.show();
 };
+
 
 
 
